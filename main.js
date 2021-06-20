@@ -9,11 +9,12 @@ var data={
 }
 //here comes snow 
 function createIncident(){
+	 var url=window.location.href;
     var requestBody = "{\"u_caller_id\":\"6a826bf03710200044e0bfc8bcbe5de3\",\"u_short_description\":\"hello\",\"u_description\":\"big hello\",\"u_contact_type\":\"virtual_agent\"}"; 
 
 var client=new XMLHttpRequest();
 client.open("post","https://dev97439.service-now.com/api/now/import/u_create_incident_using_chatbot");
-client.setRequestHeader('Access-Control-Allow-Origin','*');
+client.setRequestHeader('Access-Control-Allow-Origin',url);
 
 
 client.setRequestHeader('Accept','application/json');
